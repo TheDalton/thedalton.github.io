@@ -1,8 +1,55 @@
 <!doctype html>
 <html>
 	<head>
+		<meta charset="utf-8">
+		<title>The Dalton</title>
+		<link rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+			integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+			crossorigin="anonymous">
+		<style>body{ padding-top: 2rem; }; #map{ width: 100%; }</style>
 	</head>
 	<body>
-		<h1>¡Hola, bienvenido!</h1>
+		<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" href="#">The Dalton</a>
+		</nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-3">¡Bienvenido a The Dalton!</h1>
+        <p>Somos un bar con más de 100 años de antigüedad, siempre abierto como bar,
+        ininterrumpidamente.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Más información &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+		<h2>¡Visítanos!</h2>
+        <div id="map" />
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; 2017 The Dalton</p>
+      </footer>
+    </div> <!-- /container -->
+
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script>
+		function initMap() {
+			map = new google.maps.Map(document.getElementById('map'), {
+				center: {lat: 40.2334247, lng: -4.3908745},
+				zoom: 12
+			});
+		}
+	</script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvDQZJGOJC7C4k9O3tTfIRaKrdUmcaJ50&callback=initMap" type="text/javascript"></script>
 	</body>
 </html>
