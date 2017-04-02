@@ -3,11 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<title>The Dalton</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet"
 			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
 			integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
 			crossorigin="anonymous">
-		<style>body{ padding-top: 2rem; }; #map{ width: 100%; }</style>
+		<link rel="stylesheet" href="/global.css">
 	</head>
 	<body>
 		<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
@@ -42,14 +43,7 @@
 
 	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-	<script>
-		function initMap() {
-			map = new google.maps.Map(document.getElementById('map'), {
-				center: {lat: 40.2334247, lng: -4.3908745},
-				zoom: 12
-			});
-		}
-	</script>
+	<script src="/index.js" />
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvDQZJGOJC7C4k9O3tTfIRaKrdUmcaJ50&callback=initMap" type="text/javascript"></script>
 	</body>
 </html>
